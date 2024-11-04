@@ -19,3 +19,21 @@ spec:
         image: ghcr.io/ydeyeq/node-app-http-docker:main
         ports:
         - containerPort: 80
+        
+---
+
+# NodePort service that chooses a random port
+# on the node.
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-service
+spec:
+  type: NodePort
+  selector:
+    app: node
+  ports:
+    - port: 80
+      # By default and for convenience, the `targetPort` is set to
+      # the same value as the `port` field.
+      targetPort: 80
