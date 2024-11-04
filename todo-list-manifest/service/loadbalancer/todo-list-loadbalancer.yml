@@ -4,7 +4,7 @@ metadata:
   name: node-loadbalancer
 spec:
   selector:
-    app: todo-list-app
+    app: todo-list
   ports:
     - protocol: TCP
       port: 80
