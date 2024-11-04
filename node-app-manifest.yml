@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app-HD-deployment
+  labels:
+    app: node
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node
+  template:
+    metadata:
+      labels:
+        app: node
+    spec:
+      containers:
+      - name: node-app-http-docker
+        image: ghcr.io/ydeyeq/node-app-http-docker:main
+        ports:
+        - containerPort: 80
