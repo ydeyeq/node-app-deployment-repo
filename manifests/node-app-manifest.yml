@@ -53,12 +53,11 @@ spec:
 
 # Gateway manifest
 apiVersion: gateway.nginx.org/v1alpha1
-kind: NginxGateway
+kind: Gateway
 metadata:
   labels:
     app: node
   name: node-app-nginx-gateway
-  namespace: default
 spec:
   gatewayClassName: node-app-gatewayclass
   listeners:
