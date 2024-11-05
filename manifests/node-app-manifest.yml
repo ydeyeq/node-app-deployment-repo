@@ -41,7 +41,7 @@ spec:
 ---
 
 #GatewayClass manifest
-apiVersion: v1
+apiVersion: gateway.networking.k8s.io/v1
 kind: GatewayClass
 metadata:
   labels:
@@ -49,7 +49,6 @@ metadata:
   name: node-app-gatewayclass
 spec:
   controllerName: gateway.nginx.org/nginx-gateway-controller
-  
 ---
 
 #Gateway manifest
