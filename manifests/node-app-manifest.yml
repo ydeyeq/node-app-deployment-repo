@@ -40,7 +40,7 @@ spec:
 
 ---
 
-#GatewayClass manifest
+# GatewayClass manifest
 apiVersion: gateway.networking.k8s.io/v1
 kind: GatewayClass
 metadata:
@@ -51,7 +51,7 @@ spec:
   controllerName: gateway.nginx.org/nginx-gateway-controller
 ---
 
-#Gateway manifest
+# Gateway manifest
 apiVersion: gateway.nginx.org/v1alpha1
 kind: NginxGateway
 metadata:
@@ -68,7 +68,7 @@ spec:
 
 ---
 
-#HTTProute manifest
+# HTTProute manifest
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
